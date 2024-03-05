@@ -20,15 +20,6 @@ $(document).ready(function() {
       $('.abs-menu').toggleClass('transition-all transition-all');
   });
 
-  // Swiper Slideshow Home
-  new Swiper(".swiper-hero", {
-      loop: true,
-      effect: "fade",
-      autoplay: {
-          delay: 5000,
-          disableOnInteraction: true,
-      },
-  });
 
 
   // Accordion About
