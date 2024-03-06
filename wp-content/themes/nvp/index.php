@@ -8,9 +8,6 @@
  */
 
 get_header();
-
-$header = get_field('header');
-$chouse_us = get_field('chouse_us');
 ?>
 <div class="w-full relative bg-gradient-to-b from-[#6A71B5] to-[#41477B] rounded-b-[50px]">
     <header class="delimiter max-w-screen-xl md:h-[100vh] py-[100px] md:py-[0px]">
