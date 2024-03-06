@@ -37,7 +37,9 @@ body {
   .main-content .owl-theme .custom-nav .owl-next {
     right: -20px;
   }
-  .owl-stage{
-    height: 400px;
+  .owl-height{
+  min-height: 420px;
+}
+.owl-stage{
   top: 50px;
-  }
+}

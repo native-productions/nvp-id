@@ -28,7 +28,7 @@
 
 @layer base{
     body{
-        @apply font-poppins text-[#888888] text-[18px] leading-8;
+        @apply font-poppins text-[#888888] text-[18px] leading-8 overflow-hidden;
     }
     h1, h2, h3{
         @apply font-semibold;
@@ -61,6 +61,9 @@
     .btn-primary{
         @apply bg-white inline-flex items-center justify-center py-3 px-6 rounded-full font-normal text-sm text-black whitespace-nowrap transition-all hover:opacity-80 border-[10px] border-[#6A71B5];
     }
+    .btn-blue{
+        @apply bg-[#6A71B5] text-white inline-flex items-center justify-center py-2 px-10 rounded-full font-bold whitespace-nowrap transition-all hover:opacity-80;
+    }
     .menu{
         @apply lg:text-black whitespace-nowrap flex justify-start lg:justify-center py-3 lg:py-0 w-full lg:w-auto transition-all text-black hover:text-orange;
     }
@@ -73,14 +76,14 @@
     .btn-pagination.active{
         @apply bg-orange border-orange text-white transition-all;
     }
-    h1{
+    header h1{
         @apply text-[20px] font-semibold text-white
     }
-    h1 b{
-        @apply text-[84px] font-semibold text-white
+    header h1 strong{
+        @apply text-[40px] md:text-[84px] font-semibold text-white
     }
-    h1 b i{
-        @apply text-[84px] italic leading-[6rem] font-semibold text-white
+    header h1 strong i{
+        @apply text-[40px] md:text-[84px] italic leading-[6rem] font-semibold text-white
     }
 }
 
@@ -124,7 +127,9 @@
 </head>
 
 <body>
-  <div class="py-6 left-0 right-0 z-30 bg-opacity-100 fixed">
+  <div x-data="{ showBar: false }">
+  <div class="py-6 left-0 right-0 z-30 bg-opacity-100 fixed" :class="{ 'bg-[#6A71B5] shadow transition duration-100 py-2' : showBar }"
+       @scroll.window="showBar = (window.pageYOffset > 20) ? true : false">
      <nav class="delimiter max-w-screen-xl flex justify-between items-center flex-col lg:flex-row">
         <div class="flex items-center justify-between w-full lg:w-fit min-w-[175px] h-[45px]">
             <a href="index.php" class="flex items-center">
@@ -153,5 +158,6 @@
             <div class="abs-menu btn-mobile opacity-0 transition-all md:transition-none bg-black bg-opacity-50 left-0 right-0 bottom-0 h-[100vh] w-full -z-0 lg:hidden"></div>
         </div>
     </nav>
+    </div>
   </div>
 <main>
