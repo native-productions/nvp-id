@@ -51,15 +51,26 @@
             @apply text-sm;
         }
     }
+    
 }
 
 @layer components{
+    
     .delimiter { 
         /* @apply w-full max-w-[1180px] px-10 mx-auto; */
         @apply w-full max-w-screen-xl px-10 mx-auto;
     }
     .btn-primary{
         @apply bg-white inline-flex items-center justify-center py-3 px-6 rounded-full font-normal text-sm text-black whitespace-nowrap transition-all hover:opacity-80 border-[10px] border-[#6A71B5];
+    }
+    .input-datetime{
+        @apply rounded-[50px] px-6 py-1 text-white md:text-[#6A71B5] border-[#6A71B5] border-[1px] w-full bg-transparent;
+    }
+    .input-primary{
+        @apply w-full py-[10px] border-b-[1px] border-[#6A71B5] bg-transparent text-white md:text-[#888888];
+    }
+    .input-textarea{
+        @apply w-full border-b-[1px] border-[#6A71B5] py-2 bg-transparent text-white md:text-[#888888];
     }
     .btn-blue{
         @apply bg-[#6A71B5] text-white inline-flex items-center justify-center py-2 px-10 rounded-full font-bold whitespace-nowrap transition-all hover:opacity-80;
@@ -91,7 +102,9 @@
     #toggle:checked ~ label div.toggle-circle{
         @apply translate-x-4;
     }
+    
 }
+
 
 .swiper {
     width: 100%;
@@ -128,7 +141,7 @@
 
 <body>
   <div x-data="{ showBar: false }">
-  <div class="py-6 left-0 right-0 z-30 bg-opacity-100 fixed" :class="{ 'bg-[#6A71B5] shadow transition duration-100 py-2' : showBar }"
+  <div class="py-6 left-0 right-0 z-[999] bg-opacity-100 fixed" :class="{ 'bg-[#6A71B5] shadow transition duration-100 py-2' : showBar }"
        @scroll.window="showBar = (window.pageYOffset > 20) ? true : false">
      <nav class="delimiter max-w-screen-xl flex justify-between items-center flex-col lg:flex-row">
         <div class="flex items-center justify-between w-full lg:w-fit min-w-[175px] h-[45px]">
@@ -146,13 +159,13 @@
         </div>
         <div class="wrap-menu invisible lg:visible absolute transition-all md:transition-none lg:relative flex lg:flex w-full lg:w-auto h-[100vh] lg:h-auto top-[100%] lg:top-0">
             <div class="outer-menu translate-x-[-100%] opacity-0 transition-all md:transition-none lg:opacity-100 lg:transform-none absolute lg:relative bg-white lg:bg-transparent flex lg:flex lg:justify-center items-center lg:items-center flex-col lg:flex-row w-full max-w-fit lg:max-w-full h-[100vh] lg:h-auto left-0 z-10 lg:-z-0 px-10 lg:px-0 py-10 lg:py-0">
-                <ul class="flex flex-col w-full lg:flex-row lg:justify-center lg:items-center">
-                    <li class="m-4 lg:mx-3"><a class="lg:text-white">Home</a></li>
-                    <li class="m-4 lg:mx-3"><a class="lg:text-white">About Us</a></li>
-                    <li class="m-4 lg:mx-3"><a class="lg:text-white">Services</a></li>
-                    <li class="m-4 lg:mx-3"><a class="lg:text-white">Testimonials</a></li>
-                    <li class="m-4 lg:mx-3"><a class="lg:text-white">Pricing</a></li>
-                    <li class="m-4 lg:mx-3"><a class="lg:text-white">Contact</a></li>
+                <ul class="flex flex-col w-full lg:flex-row lg:justify-center lg:items-center md:text-white">
+                    <li class="m-4 lg:mx-3"><a href="#about">Home</a></li>
+                    <li class="m-4 lg:mx-3"><a href="#about">About Us</a></li>
+                    <li class="m-4 lg:mx-3"><a href="#about">Services</a></li>
+                    <li class="m-4 lg:mx-3"><a href="#about">Testimonials</a></li>
+                    <li class="m-4 lg:mx-3"><a href="#about">Pricing</a></li>
+                    <li class="m-4 lg:mx-3"><a href="#about">Contact</a></li>
                 </ul>
             </div>
             <div class="abs-menu btn-mobile opacity-0 transition-all md:transition-none bg-black bg-opacity-50 left-0 right-0 bottom-0 h-[100vh] w-full -z-0 lg:hidden"></div>

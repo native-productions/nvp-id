@@ -35,26 +35,9 @@
             <div>
                 <div>
                     <h3 class="font-bold text-white md:text-[#41477B] text-[40px] leading-8">Schedule Meeting</h3>
-                    <form action="">
-                        <div class="py-5">
-                            <input type="text" name="" id="" placeholder="Name" class="w-full py-[10px] border-b-[1px] border-[#6A71B5] bg-transparent text-white md:text-[#888888]">
-                            <div class="flex gap-10 py-5">
-                                <div class="w-full">
-                                    <label for="" class="block text-white md:text-[#888888]">When</label>
-                                    <input type="date" placeholder="" class="rounded-[50px] px-6 py-1 text-white md:text-[#6A71B5] border-1 border-[#6A71B5] border-[1px] w-full bg-transparent">
-                                </div>
-                                <div class="block">
-                                    <label for="" class="block text-white md:text-[#888888]">time</label>
-                                    <input type="time" placeholder="" class="rounded-[50px] px-6 py-1 text-white md:text-[#6A71B5] border-1 border-[#6A71B5] border-[1px] bg-transparent">
-                                </div>
-                            </div>
-                            <input type="email" placeholder="Email" class="w-full py-[10px] border-b-[1px] border-[#6A71B5] bg-transparent text-white md:text-[#888888]">
-                            <textarea name="" id="" class="w-full border-b-[1px] border-[#6A71B5] py-2 bg-transparent text-white md:text-[#888888]" cols="30" rows="5">Message</textarea>
-                            <a href="" class="mt-8 btn-blue">Create Meeting</a>
-                            <div class="text-end">
-                            </div>
-                        </div>
-                    </form>
+                    <div>
+                        <?php echo do_shortcode('[contact-form-7 id="32a6446" title="contact"]') ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -89,12 +72,12 @@
                 </a>
             </div>
         </div>
-        <div class="flex items-center justify-between pt-4 text-white">
+        <div class="md:flex md:items-center md:justify-between pt-4 text-white">
             <div>
                 <span>© 2022 Tekno Lintas Generasi, All rights reserved.</span>
             </div>
             <div>
-                <ul class="flex gap-5">
+                <ul class="md:flex gap-5 md:pt-0 pt-4">
                     <li><a href="">Home</a></li>
                     <li><a href="">About Us</a></li>
                     <li><a href="">Services</a></li>
