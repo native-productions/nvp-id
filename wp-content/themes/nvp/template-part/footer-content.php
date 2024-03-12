@@ -1,4 +1,4 @@
-<section class="relative">
+<section id="contact" class="relative">
     <div class="bg-[#43497E] absolute w-full md:w-[50%] h-full md:h-[110%] top-0 md:top-[-50px] left-0 z-[1] md:rounded-tr-[50px]"></div>
     <div class="delimiter py-[100px] relative z-[2]">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
@@ -78,12 +78,12 @@
             </div>
             <div>
                 <ul class="md:flex gap-5 md:pt-0 pt-4">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Testimonials</a></li>
-                    <li><a href="">Pricing</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>

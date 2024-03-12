@@ -16,7 +16,7 @@ $client = get_field('client');
 $price = get_field('price');
 ?>
 <div class="w-full relative bg-gradient-to-b from-[#6A71B5] to-[#41477B] rounded-b-[50px]">
-    <header class="delimiter max-w-screen-xl md:h-[100vh] py-[100px] md:py-[0px]">
+    <header id="header" class="delimiter max-w-screen-xl md:h-[100vh] py-[100px] md:py-[0px]">
         <div class="flex items-center h-full">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
                 <div>
@@ -34,7 +34,7 @@ $price = get_field('price');
             </div>
         </div>
     </header>
-    <section class="delimiter max-w-screen-xl" id="about">
+    <section id="about" class="delimiter max-w-screen-xl" id="about">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center text-white">
             <div class="order-last md:order-first">
                 <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/img-about.png">
@@ -77,7 +77,7 @@ $price = get_field('price');
     </section>
 </div>
 <section>
-    <div class="delimiter py-[100px]">
+    <div id="services" class="delimiter pt-[100px]">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
             <div>
                 <span class="text-[14px] font-bold bg-[#6A71B5] py-2 px-10 rounded-full text-white">Our Services</span>
@@ -102,6 +102,10 @@ $price = get_field('price');
             endif;
             ?>
         </div>
+    </div>
+</section>
+<section>
+    <div id="testimonials" class="delimiter py-[100px]">
         <div class="w-2/3 py-[100px] text-center mx-auto">
             <span class="text-[14px] font-bold bg-[#6A71B5] py-2 px-10 rounded-full text-white">Client</span>
             <h2 class="mt-6 mb-3"><b class="font-bold text-[30px] leading-8 text-[#41477B]"><?= $client['title'] ?></b></h2>
@@ -136,7 +140,7 @@ $price = get_field('price');
         </div>
     </div>
 </section>
-<section class="bg-[#DEE1FF]">
+<section id="pricing" class="bg-[#DEE1FF]">
     <div class="delimiter pt-[100px] pb-[100px] md:pb-[150px]">
         <div class="text-center">
             <span class="text-[14px] font-bold bg-[#6A71B5] py-2 px-10 rounded-full text-white">Pricing</span>
