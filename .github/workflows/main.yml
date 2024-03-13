@@ -1,0 +1,30 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy nvp.co.id
+
+on:
+  # Runs on releases
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.IP }}
+        username: ${{ secrets.USER }}
+        password: ${{ secrets.PASS }}
+        port: ${{ secrets.PORT }}
+        script: |
+          cd /var/www/nvp-id/
+          ${{ secrets.SCRIPT}}
+
+
+# IP=178.128.210.131
+# USER=
+# PASS=
+# PORT=22
+# SCRIPT="git checkout . && git pull origin main"
