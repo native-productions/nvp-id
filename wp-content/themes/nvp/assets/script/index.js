@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // AOS
-  AOS.init({ once : true });
+  AOS.init();
 
   // Header
   $('.btn-mobile').click(function() {
