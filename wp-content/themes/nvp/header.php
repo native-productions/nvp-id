@@ -31,8 +31,20 @@
     body{
         @apply font-poppins text-[#888888] text-[18px] leading-8 overflow-hidden;
     }
-    h1, h2, h3{
+    .content h1 {
+        @apply text-2xl;
+    }
+    .content h2 {
+        @apply text-xl;
+    }
+    .content h3 {
+        @apply text-lg;
+    }
+    .content h1, .content h2, .content h3{
         @apply font-semibold;
+    }
+    .content ul {
+        @apply list-outside list-disc my-5 pl-6;
     }
     span, p, b, strong, i, u, input, label, select, textarea, ul, li{
         @apply leading-8;
@@ -49,7 +61,7 @@
             @apply text-3xl;
         }
         h3, span, p, b, strong, i, u, a{
-            @apply text-sm;
+            @apply leading-8;
         }
     }
     
@@ -96,6 +108,9 @@
     }
     header h1 strong i{
         @apply text-[40px] md:text-[84px] italic leading-[6rem] font-semibold text-white
+    }
+    .content{
+        @apply text-[#000]
     }
 }
 
@@ -161,12 +176,12 @@
         <div class="wrap-menu invisible lg:visible absolute transition-all md:transition-none lg:relative flex lg:flex w-full lg:w-auto h-[100vh] lg:h-auto top-[100%] lg:top-0">
             <div class="outer-menu translate-x-[-100%] opacity-0 transition-all md:transition-none lg:opacity-100 lg:transform-none absolute lg:relative bg-white lg:bg-transparent flex lg:flex lg:justify-center items-center lg:items-center flex-col lg:flex-row w-full max-w-fit lg:max-w-full h-[100vh] lg:h-auto left-0 z-10 lg:-z-0 px-10 lg:px-0 py-10 lg:py-0">
                 <ul class="flex flex-col w-full lg:flex-row lg:justify-center lg:items-center md:text-white">
-                    <li class="m-4 lg:mx-3"><a href="#header">Home</a></li>
-                    <li class="m-4 lg:mx-3"><a href="#about">About Us</a></li>
-                    <li class="m-4 lg:mx-3"><a href="#services">Services</a></li>
-                    <li class="m-4 lg:mx-3"><a href="#testimonials">Testimonials</a></li>
-                    <li class="m-4 lg:mx-3"><a href="#pricing">Pricing</a></li>
-                    <li class="m-4 lg:mx-3"><a href="#contact">Contact</a></li>
+                    <li class="m-4 lg:mx-3"><a href="<?= bloginfo('url')?>/#header">Home</a></li>
+                    <li class="m-4 lg:mx-3"><a href="<?= bloginfo('url')?>/#about">About Us</a></li>
+                    <li class="m-4 lg:mx-3"><a href="<?= bloginfo('url')?>/#services">Services</a></li>
+                    <li class="m-4 lg:mx-3"><a href="<?= bloginfo('url')?>/#testimonials">Testimonials</a></li>
+                    <li class="m-4 lg:mx-3"><a href="<?= bloginfo('url')?>/#pricing">Pricing</a></li>
+                    <li class="m-4 lg:mx-3"><a href="<?= bloginfo('url')?>/#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="abs-menu btn-mobile opacity-0 transition-all md:transition-none bg-black bg-opacity-50 left-0 right-0 bottom-0 h-[100vh] w-full -z-0 lg:hidden"></div>
