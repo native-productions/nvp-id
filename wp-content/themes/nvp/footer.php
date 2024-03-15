@@ -1,19 +1,19 @@
 <?php get_template_part( 'template-part/footer-content'); ?>
     </main>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous"
-        referrerpolicy="no-referrer"></script>
+        referrerpolicy="no-referrer" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js"
         integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A=="
         crossorigin="anonymous"
-        referrerpolicy="no-referrer"></script>
-    <script src="<?php bloginfo('stylesheet_directory');?>/assets/script/index.js"></script>
+        referrerpolicy="no-referrer" defer></script>
+    <script src="<?php bloginfo('stylesheet_directory');?>/assets/script/index.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
         integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
         crossorigin="anonymous"
-        referrerpolicy="no-referrer"></script>
+        referrerpolicy="no-referrer" defer></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var owlCarousel = document.querySelector('.main-content .owl-carousel');
