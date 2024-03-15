@@ -1,3 +1,6 @@
+<?php
+  $header = get_field('header');
+?>
 <header id="header" class="delimiter max-w-screen-xl md:h-[100vh] py-[100px] md:py-[0px]">
   <div class="flex items-center h-full">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">

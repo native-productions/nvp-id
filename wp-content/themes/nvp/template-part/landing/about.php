@@ -1,3 +1,6 @@
+<?php
+  $about = get_field('about');
+?>
 <section id="about" class="delimiter max-w-screen-xl" id="about">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center text-white">
     <div class="order-last md:order-first" data-aos="fade-right" data-aos-duration="1000">
