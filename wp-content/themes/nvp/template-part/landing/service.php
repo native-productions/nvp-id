@@ -1,7 +1,3 @@
-<?php
-  $services = get_field('service');
-?>
-
 <section>
   <div id="services" class="delimiter pt-[100px]">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
