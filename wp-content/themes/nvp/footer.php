@@ -6,12 +6,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" integrity="sha512-Atu8sttM7mNNMon28+GHxLdz4Xo2APm1WVHwiLW9gW4bmHpHc/E2IbXrj98SmefTmbqbUTOztKl5PDPiu0LD/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="<?php bloginfo('stylesheet_directory');?>/assets/script/index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
               // Swiper Slideshow Home
         $('.main-content .owl-carousel').owlCarousel({
             loop: true,
             margin: 10,
             nav: true,
+            dots: false,
             autoHeight:true,
             navText: [
                 '<img src="<?php bloginfo('stylesheet_directory');?>/assets/img/left.png" class="h-[40px]">',
@@ -23,7 +25,7 @@
                     items: 1
                 },
                 600:{
-                    items: 3
+                    items: 2
                 },
                 1000:{
                     items: 3

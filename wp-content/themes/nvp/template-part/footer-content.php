@@ -2,7 +2,7 @@
     <div class="bg-[#43497E] absolute w-full md:w-[50%] h-full md:h-[110%] top-0 md:top-[-50px] left-0 z-[1] md:rounded-tr-[50px]"></div>
     <div class="delimiter py-[100px] relative z-[2]">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
-            <div>
+            <div data-aos="fade-up" data-aos-duration="1000">
                 <div class="text-white">
                     <span class="text-[14px] font-bold bg-[#6A71B5] py-2 px-10 rounded-full text-white">Contact Us</span>
                     <h2 class="mt-6 mb-3"><b class="font-bold text-white text-[40px] leading-8 ">Get in touch with NVP Dev</b></h2>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-duration="1000">
                 <div>
                     <h3 class="font-bold text-white md:text-[#41477B] text-[40px] leading-8">Schedule Meeting</h3>
                     <div>
@@ -72,12 +72,12 @@
                 </a>
             </div>
         </div>
-        <div class="md:flex md:items-center md:justify-between pt-4 text-white">
-            <div>
+        <div class="grid md:flex md:items-center md:justify-between pt-4 text-white">
+            <div class="order-last md:order-first">
                 <span>© 2022 Tekno Lintas Generasi, All rights reserved.</span>
             </div>
             <div>
-                <ul class="md:flex gap-5 md:pt-0 pt-4">
+                <ul class="md:flex gap-5 py-4">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>
