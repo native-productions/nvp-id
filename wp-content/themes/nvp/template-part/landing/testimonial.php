@@ -1,7 +1,3 @@
-<?php
-  $client = get_field('client');
-?>
-
 <section>
   <div id="testimonials" class="delimiter py-[100px]">
     <div class="md:w-2/3 pb-[50px] md:py-[100px] text-center mx-auto" data-aos="fade-up" data-aos-duration="1000">

@@ -29,13 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Accordion About
-    var accordionAbout = document.querySelectorAll('.accordion-about');
-    for (var i = 0; i < accordionAbout.length; i++) {
-        accordionAbout[i].addEventListener('change', function() {
+    const accordionAbout = document.querySelectorAll('.accordion-about');
+    for (const accordion of accordionAbout) {
+        accordion.addEventListener('change', function() {
             if (this.checked) {
-                var otherAccordions = document.querySelectorAll('.accordion-about:not(:checked)');
-                for (var j = 0; j < otherAccordions.length; j++) {
-                    otherAccordions[j].checked = false;
+                const otherAccordions = document.querySelectorAll('.accordion-about:not(:checked)');
+                for (const otherAccordion of otherAccordions) {
+                    otherAccordion.checked = false;
                 }
             }
         });

@@ -1,7 +1,3 @@
-<?php
-  $price = get_field('price');
-?>
-
 <section id="pricing" class="bg-[#DEE1FF]">
   <div class="delimiter pt-[100px] pb-[100px] md:pb-[150px]">
     <div class="text-center">
@@ -99,9 +95,7 @@
                 </div>
               </div>
             </li>
-            <?php endforeach;
-                                endif;
-                                ?>
+            <?php endforeach; endif; ?>
           </ul>
           <div class="divide-y divide-slate-200">
             <!-- Accordion item -->
