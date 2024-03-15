@@ -2,7 +2,7 @@
     <div class="delimiter">
         <div class="flex items-center justify-between">
             <div class="flex items-center">
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" class="h-[40px]">
+                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="logo" class="h-[40px]">
                 <span class="ms-[20px] text-white">Native Productions</span>
             </div>
             <div class="flex gap-5">
