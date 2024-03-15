@@ -146,7 +146,7 @@
        @scroll.window="showBar = (window.pageYOffset > 20) ? true : false">
      <nav class="delimiter max-w-screen-xl flex justify-between items-center flex-col lg:flex-row">
         <div class="flex items-center justify-between w-full lg:w-fit min-w-[175px] h-[45px]">
-            <a href="index.php" class="flex items-center">
+            <a href="/" class="flex items-center">
                 <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/logo.png" class="h-[40px]">
                 <span class="ms-[20px] text-white">Native Productions</span>
             </a>
@@ -161,12 +161,10 @@
         <div class="wrap-menu invisible lg:visible absolute transition-all md:transition-none lg:relative flex lg:flex w-full lg:w-auto h-[100vh] lg:h-auto top-[100%] lg:top-0">
             <div class="outer-menu translate-x-[-100%] opacity-0 transition-all md:transition-none lg:opacity-100 lg:transform-none absolute lg:relative bg-white lg:bg-transparent flex lg:flex lg:justify-center items-center lg:items-center flex-col lg:flex-row w-full max-w-fit lg:max-w-full h-[100vh] lg:h-auto left-0 z-10 lg:-z-0 px-10 lg:px-0 py-10 lg:py-0">
                 <ul class="flex flex-col w-full lg:flex-row lg:justify-center lg:items-center md:text-white">
-                    <li class="m-4 lg:mx-3"><a href="#header">Home</a></li>
-                    <li class="m-4 lg:mx-3"><a href="#about">About Us</a></li>
                     <li class="m-4 lg:mx-3"><a href="#services">Services</a></li>
-                    <li class="m-4 lg:mx-3"><a href="#testimonials">Testimonials</a></li>
                     <li class="m-4 lg:mx-3"><a href="#pricing">Pricing</a></li>
                     <li class="m-4 lg:mx-3"><a href="#contact">Contact</a></li>
+                    <li class="m-4 lg:mx-3"><a href="#">Others</a></li>
                 </ul>
             </div>
             <div class="abs-menu btn-mobile opacity-0 transition-all md:transition-none bg-black bg-opacity-50 left-0 right-0 bottom-0 h-[100vh] w-full -z-0 lg:hidden"></div>
