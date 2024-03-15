@@ -152,7 +152,7 @@
      <nav class="delimiter max-w-screen-xl flex justify-between items-center flex-col lg:flex-row">
         <div class="flex items-center justify-between w-full lg:w-fit min-w-[175px] h-[45px]">
             <a href="/" class="flex items-center">
-                <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/logo.png" class="h-[40px]" alt="logo">
+                <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/logo.png" alt="logo">
                 <span class="ms-[20px] text-white">Native Productions</span>
             </a>
             <div class="flex lg:hidden">
