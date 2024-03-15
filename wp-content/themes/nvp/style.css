@@ -40,6 +40,11 @@ body {
   .owl-height{
   min-height: 470px;
 }
+  @media only screen and (max-width: 600px) {
+    .owl-height{
+      min-height: 370px;
+    }
+  }
 .owl-stage{
   top: 50px;
 }

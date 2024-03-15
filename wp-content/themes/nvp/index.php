@@ -19,14 +19,14 @@ $price = get_field('price');
     <header id="header" class="delimiter max-w-screen-xl md:h-[100vh] py-[100px] md:py-[0px]">
         <div class="flex items-center h-full">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
-                <div>
+                <div data-aos="fade-right" data-aos-duration="1000">
                     <div><?= $header['title'] ?></div>
-                    <div class="my-4 w-4/5">
+                    <div class="my-4 md:w-4/5">
                         <div class="leading-[30px] text-white"><?= $header['description'] ?></div>
                     </div>
                     <a href="" class="btn-primary mt-3">Contact us</a>
                 </div>
-                <div>
+                <div data-aos="fade-left" data-aos-duration="1000">
                     <div class="relative flex">
                         <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/header-img.png" class="w-4/5">
                     </div>
@@ -36,20 +36,21 @@ $price = get_field('price');
     </header>
     <section id="about" class="delimiter max-w-screen-xl" id="about">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center text-white">
-            <div class="order-last md:order-first">
+            <div class="order-last md:order-first" data-aos="fade-right" data-aos-duration="1000">
                 <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/img-about.png">
             </div>
-            <div>
+            <div data-aos="fade-left" data-aos-duration="1000">
                 <div>
                     <span class="text-[14px] font-bold bg-[#6A71B5] py-2 px-10 rounded-full">About us</span>
                     <h2 class="mt-6 mb-3"><b class="font-bold text-[30px] leading-8 "><?= $about['title'] ?></b></h2>
-                    <div class=" w-9/12"><?= $about['description'] ?></div>
+                    <div class="md:w-9/12"><?= $about['description'] ?></div>
                 </div>
                 <div class="flex flex-wrap pt-5">
                     <?php
                     if ($about['list_number']) :
+                        $count;
                         foreach ($about['list_number'] as $aboutnumber) : ?>
-                            <div class="pe-4 py-4">
+                            <div class="pe-4 py-4" data-aos="fade-up" data-aos-duration="1<?php echo $count++; ?>00">
                                 <h2 class="text-[40px] "><?= $aboutnumber['text'] ?></h2>
                                 <div>
                                     <p><?= $aboutnumber['description'] ?></p>
@@ -61,11 +62,12 @@ $price = get_field('price');
                 </div>
             </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-14 text-white w-11/12 py-[100px]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-14 text-white md:w-11/12 pb-[50px] pt-[10px] md:py-[100px]">
             <?php
             if ($about['list_benefit']) :
+                $count;
                 foreach ($about['list_benefit'] as $benefit) : ?>
-                    <div class="text-center">
+                    <div class="text-center" data-aos="fade-up" data-aos-duration="1<?php echo $count++; ?>00">
                         <img src="<?= $benefit['icon']['url'] ?>" class="mx-auto">
                         <h3 class="pb-3 pt-6"><?= $benefit['title'] ?></h3>
                         <p><?= $benefit['description'] ?></p>
@@ -79,19 +81,20 @@ $price = get_field('price');
 <section>
     <div id="services" class="delimiter pt-[100px]">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
-            <div>
+            <div data-aos="fade-right" data-aos-duration="1000">
                 <span class="text-[14px] font-bold bg-[#6A71B5] py-2 px-10 rounded-full text-white">Our Services</span>
                 <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/service.png">
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-duration="1000">
                 <p><?= $services['description'] ?></p>
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-14 items-center pt-[100px]">
             <?php
             if ($services['list_service']) :
+                $c;
                 foreach ($services['list_service'] as $service) : ?>
-                    <div class="flex items-start gap-10">
+                    <div class="flex items-start gap-10" data-aos="fade-up" data-aos-duration="<?= $c++; ?>000">
                         <img src="<?= $service['icon']['url'] ?>" class="object-contain">
                         <div>
                             <h3 class="text-[#41477B]"><?= $service['title'] ?></h3>
@@ -106,17 +109,18 @@ $price = get_field('price');
 </section>
 <section>
     <div id="testimonials" class="delimiter py-[100px]">
-        <div class="w-2/3 py-[100px] text-center mx-auto">
+        <div class="md:w-2/3 pb-[50px] md:py-[100px] text-center mx-auto" data-aos="fade-up" data-aos-duration="1000">
             <span class="text-[14px] font-bold bg-[#6A71B5] py-2 px-10 rounded-full text-white">Client</span>
-            <h2 class="mt-6 mb-3"><b class="font-bold text-[30px] leading-8 text-[#41477B]"><?= $client['title'] ?></b></h2>
+            <h2 class="my-4"><b class="font-bold text-[30px] leading-8 text-[#41477B]"><?= $client['title'] ?></b></h2>
             <p><?= $client['description'] ?></p>
         </div>
         <div class="main-content">
             <div class="owl-carousel owl-theme">
                 <?php
                 if ($client['list_client']) :
+                    $c=1;
                     foreach ($client['list_client'] as $client) : ?>
-                        <div class="item">
+                        <div class="item" data-aos="fade-up" data-aos-duration="1<?= $c++; ?>00">
                             <div class="text-white text-center bg-gradient-to-b from-[#6A71B5] to-[#646BAC] rounded-[50px] relative px-5 pb-[40px] pt-[120px]">
                                 <div class="w-[120px] h-[120px] p-3 rounded-full mx-auto bg-white border-[10px] border-[#41477B] top-[-20px] absolute left-[50%] translate-x-[-50%]">
                                     <div class="flex items-center h-full">
@@ -145,7 +149,7 @@ $price = get_field('price');
         <div class="text-center">
             <span class="text-[14px] font-bold bg-[#6A71B5] py-2 px-10 rounded-full text-white">Pricing</span>
             <h2 class="mt-6 mb-3"><b class="font-bold text-[#41477B] text-[40px] leading-8 "><?= $price['title'] ?></b></h2>
-            <div class="w-3/5 mx-auto">
+            <div class="md:w-3/5 mx-auto">
                 <p><?= $price['description'] ?></p>
             </div>
         </div>
@@ -153,8 +157,9 @@ $price = get_field('price');
             <?php
             $list_paket = $price['list_paket'];
             if ($list_paket) :
+                $c=1;
                 foreach ($list_paket as $list) : ?>
-                    <div class="bg-white shadow rounded-[50px] py-[50px]">
+                    <div class="bg-white shadow rounded-[50px] py-[50px]" data-aos="fade-up" data-aos-duration="1<?= $c++; ?>00">
                         <div class="text-center border-b border-1 pb-5">
                             <h3 class="text-[24px] font-bold text-[#41477B]"><?= $list['title'] ?></h3>
                             <div class="flex gap-4 justify-center items-center py-4">
