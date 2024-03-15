@@ -40,7 +40,9 @@
         $count;
         foreach ($about['list_benefit'] as $benefit) : ?>
           <div class="text-center" data-aos="fade-up" data-aos-duration="1<?php echo $count++; ?>00">
-            <img src="<?= $benefit['icon']['url'] ?>" class="flex justify-center" alt="<?= $benefit['title'] ?>">
+            <img src="<?= $benefit['icon']['url'] ?>"
+              class="mx-auto flex justify-center"
+              alt="<?= $benefit['title'] ?>">
             <h3 class="pb-3 pt-6">
               <?= $benefit['title'] ?>
             </h3>

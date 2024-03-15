@@ -100,4 +100,12 @@ function webp_is_displayable($result, $path) {
 }
 
 add_filter('file_is_displayable_image', 'webp_is_displayable', 10, 2);
-if ( !is_admin() ) wp_deregister_script('jquery');
+
+function removeJq() {
+    if (!is_admin()) {
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', false);
+    }
+}
+
+add_action('init', 'removeJq');
