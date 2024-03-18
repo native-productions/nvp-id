@@ -72,12 +72,10 @@ $contact = get_field('contact');
             </div>
         </div>
         <div class="flex flex-col justify-center md:ml-8 md:relative md:top-[-6px] text-center md:text-left">
-            <span class="mb-1 text-sm font-bold tracking-widest uppercase">Contact</span>
-            <span class="text-lg md:text-xl text-[#41477B] font-bold py-2">Aldo Winata</span>
-            <span class="leading-tight md:text-md">
-                Senior Talent Acquisition and Employer Branding
-                –
-                People &amp; Culture
+            <span class="mb-1 text-sm font-bold uppercase">Contact</span>
+            <span class="text-lg md:text-xl text-[#41477B] font-bold py-2"><?= $contact['name']?></span>
+            <span class="md:text-md">
+                <?= $contact['deskripsi']?>
             </span>
         </div>
     </div>

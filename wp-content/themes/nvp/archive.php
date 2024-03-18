@@ -14,7 +14,7 @@ get_header(); ?>
             $the_query = new WP_Query(
                 array(
                     'posts_per_page' => 1,
-                    'post_type' => 'job',
+                    'post_type' => 'post',
                     'paged' => get_query_var('paged') ? get_query_var('paged') : 1
                 )
             );

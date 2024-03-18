@@ -159,7 +159,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <body>
   <div x-data="{ showBar: false }">
-<div class="left-0 right-0 z-[999] bg-opacity-100 fixed py-6 <?php if ( is_page( array( 'jobs' ) ) ) { echo 'bg-[#6A71B3]'; }  ?>"
+<div class="left-0 right-0 z-[999] bg-opacity-100 fixed py-6 <?php if ( is_page( array( 'jobs' ) ) || is_single() && 'post' == get_post_type() ) { echo 'bg-[#6A71B3]'; }  ?>"
     :class="{ 'bg-[#6A71B5] shadow transition duration-100 py-2' : showBar }"
        @scroll.window="showBar = (window.pageYOffset > 20) ? true : false">
      <nav class="delimiter max-w-screen-xl flex justify-between items-center flex-col lg:flex-row">
