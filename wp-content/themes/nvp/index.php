@@ -13,4 +13,5 @@
 <?php get_template_part('template-part/landing/service'); ?>
 <?php get_template_part('template-part/landing/testimonial'); ?>
 <?php get_template_part('template-part/landing/pricing'); ?>
+<?php get_template_part('template-part/landing/contact'); ?>
 <?php get_footer(); ?>

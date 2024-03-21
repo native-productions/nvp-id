@@ -19,15 +19,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory');?>/assets/img/n-logo.png">
 <link href="<?php bloginfo('stylesheet_directory') ;?>/style.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://cdn.tailwindcss.com"></script>
 <style type="text/tailwindcss">
 
@@ -35,8 +33,20 @@
     body{
         @apply font-poppins text-[#888888] text-[18px] leading-8 overflow-hidden;
     }
-    h1, h2, h3{
+    .content h1 {
+        @apply text-2xl;
+    }
+    .content h2 {
+        @apply text-xl;
+    }
+    .content h3 {
+        @apply text-lg;
+    }
+    .content h1, .content h2, .content h3{
         @apply font-semibold;
+    }
+    .content ul {
+        @apply list-outside list-disc my-5 pl-6;
     }
     span, p, b, strong, i, u, input, label, select, textarea, ul, li{
         @apply leading-8;
@@ -53,7 +63,7 @@
             @apply text-3xl;
         }
         h3, span, p, b, strong, i, u, a{
-            @apply text-sm;
+            @apply leading-8;
         }
     }
     
@@ -101,6 +111,9 @@
     header h1 strong i{
         @apply text-[40px] md:text-[84px] italic leading-[6rem] font-semibold text-white
     }
+    .content{
+        @apply text-[#000]
+    }
 }
 
 @layer utilities{
@@ -146,13 +159,13 @@
 
 <body>
   <div x-data="{ showBar: false }">
-<div class="left-0 right-0 z-[999] bg-opacity-100 fixed py-6"
+<div class="left-0 right-0 z-[999] bg-opacity-100 fixed py-6 <?php if ( is_page( array( 'jobs' ) ) || is_single() && 'post' == get_post_type() ) { echo 'bg-[#6A71B3]'; }  ?>"
     :class="{ 'bg-[#6A71B5] shadow transition duration-100 py-2' : showBar }"
        @scroll.window="showBar = (window.pageYOffset > 20) ? true : false">
      <nav class="delimiter max-w-screen-xl flex justify-between items-center flex-col lg:flex-row">
         <div class="flex items-center justify-between w-full lg:w-fit min-w-[175px] h-[45px]">
             <a href="/" class="flex items-center">
-                <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/logo.png" alt="logo">
+                <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/logo.png" alt="logo" class="w-[50px]">
                 <span class="ms-[20px] text-white">Native Productions</span>
             </a>
             <div class="flex lg:hidden">
@@ -166,10 +179,12 @@
         <div class="wrap-menu invisible lg:visible absolute transition-all md:transition-none lg:relative flex lg:flex w-full lg:w-auto h-[100vh] lg:h-auto top-[100%] lg:top-0">
             <div class="outer-menu translate-x-[-100%] opacity-0 transition-all md:transition-none lg:opacity-100 lg:transform-none absolute lg:relative bg-white lg:bg-transparent flex lg:flex lg:justify-center items-center lg:items-center flex-col lg:flex-row w-full max-w-fit lg:max-w-full h-[100vh] lg:h-auto left-0 z-10 lg:-z-0 px-10 lg:px-0 py-10 lg:py-0">
                 <ul class="flex flex-col w-full lg:flex-row lg:justify-center lg:items-center md:text-white">
-                    <li class="m-4 lg:mx-3"><a href="#services">Services</a></li>
-                    <li class="m-4 lg:mx-3"><a href="#pricing">Pricing</a></li>
-                    <li class="m-4 lg:mx-3"><a href="#contact">Contact</a></li>
-                    <li class="m-4 lg:mx-3"><a href="#">Others</a></li>
+                    <li class="m-4 lg:mx-3"><a href="<?= bloginfo('url')?>/#header">Home</a></li>
+                    <li class="m-4 lg:mx-3"><a href="<?= bloginfo('url')?>/#about">About Us</a></li>
+                    <li class="m-4 lg:mx-3"><a href="<?= bloginfo('url')?>/#services">Services</a></li>
+                    <li class="m-4 lg:mx-3"><a href="<?= bloginfo('url')?>/#testimonials">Testimonials</a></li>
+                    <li class="m-4 lg:mx-3"><a href="<?= bloginfo('url')?>/#pricing">Pricing</a></li>
+                    <li class="m-4 lg:mx-3"><a href="<?= bloginfo('url')?>/#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="abs-menu btn-mobile opacity-0 transition-all md:transition-none bg-black bg-opacity-50 left-0 right-0 bottom-0 h-[100vh] w-full -z-0 lg:hidden"></div>
